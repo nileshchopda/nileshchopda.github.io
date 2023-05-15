@@ -1,19 +1,99 @@
-title: <p align="center"> Nilesh Chopda </p>
+# title: <p align="center"> Nilesh Chopda </p>
 
-logo: "images/linkedin_image.jpeg"
+# logo: "images/linkedin_image.jpeg"
 
-description:
-  <p align="center">
-  <a href="pdf/resume.pdf">Resume</a> |
-  <a href="https://www.linkedin.com/in/nileshchopda/">LinkedIn</a> |
-  <a href="https://github.com/nileshchopda">GitHub</a>
-  </p>
+# description:
+#   <p align="center">
+#   <a href="pdf/resume.pdf">Resume</a> |
+#   <a href="https://www.linkedin.com/in/nileshchopda/">LinkedIn</a> |
+#   <a href="https://github.com/nileshchopda">GitHub</a>
+#   </p>
   
-  <p align="justify">
-  <br><br>
-  I am currently working as Lead Data Scientist at upGrad-INSOFE with a focus on NLP and Deep Learning research.
-  <br><br>
-  </p>
+#   <p align="justify">
+#   <br><br>
+#   I am currently working as Lead Data Scientist at upGrad-INSOFE with a focus on NLP and Deep Learning research.
+#   <br><br>
+#   </p>
   
-theme: jekyll-theme-minimal
-google_analytics: UA-145578661-1 # Google Analytics tracking ID
+# theme: jekyll-theme-minimal
+# google_analytics: UA-145578661-1 # Google Analytics tracking ID
+
+---
+title: Nilesh Chopda
+---
+
+## Contact
+
+* Email: nilesh.chopda2112@gmail.com
+* Phone: +91 8586994959
+* Address: Pune, India
+
+## Profile
+
+* Exceptional lead data scientist with 10 years of experience turning raw data from multiple sources into valuable insights and creative solutions.
+* Ability to translate vast amounts data into meaningful findings that influence business strategy.
+* Solid background in data engineering and predictive modelling.
+* Compelling presentation and reporting skills.
+* Works cross-functionally to adapt systems to changing business needs and formulate winning solutions.
+
+## Work Experience
+
+* Senior Data Scientist
+  * ATLAS - upGrad Labs (Formerly INSOFE)
+  * April 2019 - Present
+* Analytics Consultant
+  * Netech - The Branding Store
+  * February 2014 - March 2018
+* Data Analyst
+  * Cognizant Technology Solutions
+  * November 2012 - January 2014
+
+## Key Skills
+
+* Machine Learning
+* Deep Learning
+* Predictive Modelling
+* Data Preprocessing
+* Statistical Analysis
+* Big Data Analytics
+* Clustering and Segmentation
+* NLP and Text Processing
+* Regression Analysis
+* Computer Vision and Image Processing
+* Generative Algorithms and LLMs
+* Programming Languages: Python, R, C, SQL, Pyspark
+* Python Packages: Pandas, Numpy, Sklearn, Keras, Tensorflow, NLTK, Spacy, OpenCV
+* Data Visualization and Storytelling: Tableau, PowerBI, Plotly, Seaborn, Matplotlib
+* Model Deployment and MLOps: Git, Docker, CI/CD, Containerisation, Flask, Streamlit, Heroku
+* Cloud: Azure Synapse Analytics, Databricks, Dataiku, GCP MLFlow, AWS Sagemaker, Azure ML Studio, Rapidminer
+* Big Data and Database: PySpark, Hadoop, Spark-SQL, Hive, MySQL, MongoDB, Amazon S3
+
+## Functional Skills
+
+* Leadership and Management
+* Communication
+* Critical Thinking
+* Business Acumen
+* Adaptability
+
+## Education
+
+* BE in Electronics and Telecommunication
+  * University of Pune
+  * August 2008 - July 2012
+* PGP in Big Data Analytics and Optimisation
+  * INSOFE, Hyderabad
+  * December 2018
+* Rapidminer Machine Learning Master Certification
+  * RapidMiner Academy
+  * July 2021
+
+## Achievements
+
+* Developed predictive models with open source data to solve large insurance frauds, work recognised by IRDA.
+* Received “Going the Extra Mile Award” for exceptional performance.
+* Conducted 20+ workshops on AI/ML across universities and corporates.
+* Guided 100+ data professionals in career choices across data management and AI roles.
+* Published “Understanding TensorFlow Object Detection API for Traffic Lights Detection” on Medium in April 2019.
+* 10+ private POCs waiting for licensing in Github private repository.
+
