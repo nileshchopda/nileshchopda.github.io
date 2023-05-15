@@ -1,78 +1,20 @@
-# title: <p align="center"> Nilesh Chopda </p>
+title: <p align="center"> Nilesh Chopda </p>
 
-# logo: "images/linkedin_image.jpeg"
+logo: "images/linkedin_image.jpeg"
 
-# description:
-#   <p align="center">
-#   <a href="pdf/resume.pdf">Resume</a> |
-#   <a href="https://www.linkedin.com/in/nileshchopda/">LinkedIn</a> |
-#   <a href="https://github.com/nileshchopda">GitHub</a>
-#   </p>
+description:
+  <p align="center">
+  <a href="pdf/resume.pdf">Resume</a> |
+  <a href="https://www.linkedin.com/in/nileshchopda/">LinkedIn</a> |
+  <a href="https://github.com/nileshchopda">GitHub</a>
+  </p>
   
-#   <p align="justify">
-#   <br><br>
-#   I am currently working as Lead Data Scientist at upGrad-INSOFE with a focus on NLP and Deep Learning research.
-#   <br><br>
-#   </p>
+  <p align="justify">
+  <br><br>
+  I am currently working as Lead Data Scientist at upGrad-INSOFE with a focus on NLP and Deep Learning research.
+  <br><br>
+  </p>
   
-# theme: jekyll-theme-minimal
-# google_analytics: UA-145578661-1 # Google Analytics tracking ID
+theme: jekyll-theme-minimal
+google_analytics: UA-145578661-1 # Google Analytics tracking ID
 
----
-layout: minimal
-title: Nilesh Chopda
----
-
-<h1>{{ title }}</h1>
-
-<p>{{ contact }}</p>
-
-<p>{{ profile }}</p>
-
-<h2>Work Experience</h2>
-
-{% for work_experience in work_experiences %}
-
-<h3>{{ work_experience.title }}</h3>
-
-<p>{{ work_experience.company }}</p>
-
-<p>{{ work_experience.dates }}</p>
-
-{% endfor %}
-
-<h2>Key Skills</h2>
-
-{% for key_skill in key_skills %}
-
-<p>{{ key_skill }}</p>
-
-{% endfor %}
-
-<h2>Functional Skills</h2>
-
-{% for functional_skill in functional_skills %}
-
-<p>{{ functional_skill }}</p>
-
-{% endfor %}
-
-<h2>Education</h2>
-
-{% for education in educations %}
-
-<h3>{{ education.degree }}</h3>
-
-<p>{{ education.school }}</p>
-
-<p>{{ education.dates }}</p>
-
-{% endfor %}
-
-<h2>Achievements</h2>
-
-{% for achievement in achievements %}
-
-<p>{{ achievement }}</p>
-
-{% endfor %}
