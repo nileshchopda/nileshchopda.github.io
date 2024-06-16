@@ -1,6 +1,8 @@
 # Portfolio
 ---
-## Lead Data Scientist and AI Architect at Bizmetric India Pvt Ltd (05/2023 – present)
+## Data Science Architect at Calsoft Inc (05/2024 – Present)
+
+## Lead Data Scientist and AI Architect at Bizmetric India Pvt Ltd (05/2023 – 04/2024)
 
 ### Digitisation of Piping Extraction and Remedial Action Report Forms
 
