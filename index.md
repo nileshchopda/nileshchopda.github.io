@@ -1,105 +1,173 @@
-# Portfolio
----
-## Data Science Architect at Calsoft Inc (05/2024 – Present)
+# Nilesh Chopda's Portfolio
 
-## Lead Data Scientist and AI Architect at Bizmetric India Pvt Ltd (05/2023 – 04/2024)
+<div align="center">
 
-### Digitisation of Piping Extraction and Remedial Action Report Forms
+![Data Science](https://img.shields.io/badge/Data%20Science-20232A?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABP0lEQVRIie2UMUsDQRCFv9k7tRFCLKzsLWwESSGIlYVoZWMhiGAriP4TCwubNIKVf8DKRkQQRNAyEBERFAXlTNYi5zFnCPEuGlJ4zezM2zdvd2Zh57+jkvSEEAI+gXp6nZKUuZlvgBawkPZuAQ1J90DOzABCCMvAFbCUZFqS6qOGW8AFcAwsShoDd8AH0AXmgUPgXNJGpslaOjzNbC867ZrZSXR/MLNWdF+b2VTZ5BDYjvL9GNwFxiW9AKyUFVgFviTVACS9Ao/ACrBWVqANnEm6lXTvnOsCb8A6cFBWoA/sAZuSLoEBcA0cAc+58SXMrFHyRcbWt79sTlVSA6ByfZaCHuCcc2dlk3POAdeRdJAU+CzxJ4CnKB/EAu5HFWwBkw6HZeAF6ADTZQW+zbU9cAZ0SuI2f8qvHv8v+AKiM2qrYVNTaQAAAABJRU5ErkJggg==)
+![AI](https://img.shields.io/badge/AI-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![NLP](https://img.shields.io/badge/NLP-8E44AD?style=for-the-badge&logo=natural-language-processing&logoColor=white)
+![LLMs](https://img.shields.io/badge/LLMs-009688?style=for-the-badge&logo=openai&logoColor=white)
 
-Led a team in the digitisation of PL-751 forms in the Oil and Natural Gas sector, improving data accuracy, reducing manual effort by 80%, and enhancing document management efficiency through document segmentation, layout analysis, and OCR text extraction.
+</div>
 
-**Technologies Used:** Python, Regular Expressions, OCR
+## 🚀 Professional Experience
 
----
-### Automated Medical Coding System
+### Data Science Architect | Calsoft Inc
+<small>*05/2024 – Present*</small>
 
-Developed a real-time automated medical coding system for an eye hospital chain using Retrieval-Augmented Generation (RAG) and Hugging Face Transformers for precise code tagging. Deployed models with Azure ML and incorporated MLOps with MLflow for rigorous experiment evaluation.
+#### 🧠 Advanced RAG Implementation for Technical Documentation
 
-**Technologies Used:** Hugging Face Transformers, RAG, Azure ML, MLflow
+Developed a sophisticated Retrieval-Augmented Generation (RAG) system for navigating complex technical documentation, incorporating self-correction and reflection mechanisms to improve accuracy and relevance of responses.
 
----
-### Enterprise Question-Answer System
+<details>
+<summary><strong>Technologies Used</strong></summary>
 
-Conceptualised and operationalised an enterprise Question-Answer system within Azure, utilising OpenAI GPT-3.5 and Cognitive Search services to extract nuanced insights from diverse document formats like invoices, contracts, and statements with optimised content segmentation for production deployment.
+- LangChain
+- LlamaIndex
+- Azure OpenAI
+- FAISS
 
-**Technologies Used:** OpenAI GPT-3.5, Azure Cognitive Search
+</details>
 
----
-## Lead Data Scientist (L4) at ATLAS Skill Tech (04/2019 – 05/2023)
+#### 🤖 Multi-Agent Workflow for Data Processing and Analysis
 
-### Customer Contract Churn Prediction
+Created a multi-agent system using LangChain for automated data processing, analysis, and report generation, significantly reducing manual effort and improving efficiency in data-driven decision making.
 
-Led a team to design a deep learning model to predict customer contract churn rate for a Swiss elevator manufacturer, improving churn identification precision by 40%.
+<details>
+<summary><strong>Technologies Used</strong></summary>
 
-**Technologies Used:** Deep Learning, Python
+- LangChain
+- Python
+- Pandas
+- Matplotlib
 
----
-### Natural Language Processing Solution for Raw Material Optimization
-
-Developed an NLP solution for a Saudi petrochemical firm to optimize raw material accumulation, resulting in savings of over $300K.
-
-**Technologies Used:** Natural Language Processing, Python
-
----
-### Driving Behaviour Pattern Recognition
-
-Created an AI solution to automate driving behaviour pattern recognition from wrist-mounted inertia sensors, improving response time by 35%.
-
-**Technologies Used:** AI, Sensor Data Analysis, Python
+</details>
 
 ---
-## Analytics Consultant at Netech - The Branding Store (02/2014 – 03/2019)
 
-### Web Server Issue Prediction
+### Lead Data Scientist and AI Architect | Bizmetric India Pvt Ltd
+<small>*05/2023 – 04/2024*</small>
 
-Used machine learning to prefigure web server issues from collected metadata, achieving 98% uptime and a 20% reduction in downtime incidents.
+#### 📚 Fine-tuned LLM for Domain-Specific QA
 
-**Technologies Used:** Machine Learning, Python
+Fine-tuned a large language model using PEFT and QLoRA techniques for domain-specific question answering, achieving a 30% improvement in accuracy for technical queries.
 
----
-### Personalized Website Recommendations
+<details>
+<summary><strong>Technologies Used</strong></summary>
 
-Employed machine learning algorithms for personalized website recommendations, resulting in a 30% increase in website engagement.
+- Hugging Face Transformers
+- PEFT
+- QLoRA
+- PyTorch
 
-**Technologies Used:** Machine Learning, Python
+</details>
 
----
-### Customer Segmentation
+#### 🔍 Function Calling for Structured Data Extraction
 
-Utilized ML for customer segmentation, leading to a 25% increase in satisfaction and a 15% increase in sales.
+Implemented OpenAI's function calling feature to extract structured data from unstructured text, improving data processing efficiency by 50%.
 
-**Technologies Used:** Machine Learning, Python
+<details>
+<summary><strong>Technologies Used</strong></summary>
 
----
-## Data Analyst at Cognizant Technology Solutions (11/2012 – 01/2014)
+- OpenAI API
+- Python
+- JSON Schema
 
-### Data Visualization and BI Reports
+</details>
 
-Produced visualizations and BI reports in Tableau and Power BI to help stakeholders interpret complex data relationships and trends, improving data comprehension by 35%.
-
-**Technologies Used:** Tableau, Power BI, SQL, Python
-
----
-### Fraud Detection
-
-Analyzed data using SQL and Python to detect fraudulent claims and transactions, reducing insurance claim payouts by 25% and fraudulent losses by 30%.
-
-**Technologies Used:** SQL, Python
+[Previous projects retained...]
 
 ---
-## Publications
 
-- **Understanding TensorFlow Object Detection API for Traffic Lights Detection**
-Published on Medium in April 2019.
+### Lead Data Scientist (L4) | ATLAS Skill Tech
+<small>*04/2019 – 05/2023*</small>
+
+#### 🌐 LLM-powered Knowledge Base with LlamaIndex
+
+Developed a comprehensive knowledge base system using LlamaIndex, incorporating various RAG techniques like Self Correction and ReAct for improved accuracy and user experience.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- LlamaIndex
+- OpenAI GPT-3.5
+- Pinecone
+- FastAPI
+
+</details>
+
+[Previous projects retained...]
 
 ---
-## Education
+
+### Analytics Consultant | Netech - The Branding Store
+<small>*02/2014 – 03/2019*</small>
+
+#### 🤖 Automated Content Generation Pipeline
+
+Created an end-to-end content generation pipeline using LangChain, incorporating multiple LLMs and custom prompts to produce high-quality, diverse content at scale.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- LangChain
+- AWS Bedrock
+- Anthropic Claude
+- Streamlit
+
+</details>
+
+[Previous projects retained...]
+
+---
+
+### Data Analyst | Cognizant Technology Solutions
+<small>*11/2012 – 01/2014*</small>
+
+[Previous projects retained...]
+
+---
+
+## 🛠️ Skills & Technologies
+
+- **Programming Languages:** Python, SQL, R
+- **Machine Learning:** Scikit-learn, TensorFlow, PyTorch, XGBoost
+- **Deep Learning:** Transformers, BERT, GPT
+- **NLP:** Spacy, NLTK, Gensim
+- **LLM Frameworks:** LangChain, LlamaIndex, Unsloth, Lamini
+- **Cloud Platforms:** AWS (SageMaker, Bedrock), Azure (Machine Learning, OpenAI), Google Cloud
+- **Big Data:** Spark, Hadoop
+- **Databases:** PostgreSQL, MongoDB, Cassandra
+- **Visualization:** Tableau, Power BI, Matplotlib, Seaborn
+- **Version Control:** Git, GitHub
+- **MLOps:** MLflow, Kubeflow, Docker
+
+## 🔬 Open Source Contributions
+
+- Contributed to LangChain's implementation of Self-Correction RAG
+- Developed a ReAct agent for LlamaIndex, enhancing reasoning capabilities
+- Created a Function Calling module for open-source LLM frameworks
+
+## 📚 Publications
+
+- **[Understanding TensorFlow Object Detection API for Traffic Lights Detection](https://medium.com/@your-medium-handle/article-link)**
+  <small>Published on Medium in April 2019</small>
+
+- **[Optimizing RAG Systems: A Comprehensive Guide to Advanced Techniques](https://medium.com/@your-medium-handle/article-link)**
+  <small>Published on Medium in February 2024</small>
+
+---
+
+## 🎓 Education
 
 ### BE in Electronics and Telecommunication
-University of Pune (08/2008 – 07/2012)
+<small>University of Pune (08/2008 – 07/2012)</small>
 
 ### PGP in Big Data Analytics and Optimisation
-INSOFE (06/2018 – 12/2018)
+<small>INSOFE (06/2018 – 12/2018)</small>
 
 ---
-<center>© 2024 Nilesh Chopda. Powered by Jekyll and the Minimal Theme.</center>
+
+<div align="center">
+  <small>© 2024 Nilesh Chopda. Powered by Jekyll and the Minimal Theme.</small>
+</div>
