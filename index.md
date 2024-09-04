@@ -2,11 +2,6 @@
 
 <div align="right">
 
-![Data Science](https://img.shields.io/badge/Data%20Science-20232A?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABP0lEQVRIie2UMUsDQRCFv9k7tRFCLKzsLWwESSGIlYVoZWMhiGAriP4TCwubNIKVf8DKRkQQRNAyEBERFAXlTNYi5zFnCPEuGlJ4zezM2zdvd2Zh57+jkvSEEAI+gXp6nZKUuZlvgBawkPZuAQ1J90DOzABCCMvAFbCUZFqS6qOGW8AFcAwsShoDd8AH0AXmgUPgXNJGpslaOjzNbC867ZrZSXR/MLNWdF+b2VTZ5BDYjvL9GNwFxiW9AKyUFVgFviTVACS9Ao/ACrBWVqANnEm6lXTvnOsCb8A6cFBWoA/sAZuSLoEBcA0cAc+58SXMrFHyRcbWt79sTlVSA6ByfZaCHuCcc2dlk3POAdeRdJAU+CzxJ4CnKB/EAu5HFWwBkw6HZeAF6ADTZQW+zbU9cAZ0SuI2f8qvHv8v+AKiM2qrYVNTaQAAAABJRU5ErkJggg==)
-![AI](https://img.shields.io/badge/AI-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![NLP](https://img.shields.io/badge/NLP-8E44AD?style=for-the-badge&logo=natural-language-processing&logoColor=white)
-![LLMs](https://img.shields.io/badge/LLMs-009688?style=for-the-badge&logo=openai&logoColor=white)
 
 </div>
 
