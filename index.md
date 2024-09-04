@@ -150,11 +150,11 @@ Created an end-to-end content generation pipeline using LangChain, incorporating
 
 ## 📚 Publications
 
-- **[Understanding TensorFlow Object Detection API for Traffic Lights Detection](https://medium.com/@your-medium-handle/article-link)**
-  <small>Published on Medium in April 2019</small>
-
-- **[Optimizing RAG Systems: A Comprehensive Guide to Advanced Techniques](https://medium.com/@your-medium-handle/article-link)**
+- **Optimizing RAG Systems: A Comprehensive Guide to Advanced Techniques**
   <small>Published on Medium in February 2024</small>
+  
+- **Understanding TensorFlow Object Detection API for Traffic Lights Detection**
+  <small>Published on Medium in April 2019</small>
 
 ---
 
