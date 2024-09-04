@@ -1,14 +1,14 @@
-# Nilesh Chopda's Portfolio
 
 <div align="center">
 
-![Data Science](https://img.shields.io/badge/Data%20Science-20232A?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABP0lEQVRIie2UMUsDQRCFv9k7tRFCLKzsLWwESSGIlYVoZWMhiGAriP4TCwubNIKVf8DKRkQQRNAyEBERFAXlTNYi5zFnCPEuGlJ4zezM2zdvd2Zh57+jkvSEEAI+gXp6nZKUuZlvgBawkPZuAQ1J90DOzABCCMvAFbCUZFqS6qOGW8AFcAwsShoDd8AH0AXmgUPgXNJGpslaOjzNbC867ZrZSXR/MLNWdF+b2VTZ5BDYjvL9GNwFxiW9AKyUFVgFviTVACS9Ao/ACrBWVqANnEm6lXTvnOsCb8A6cFBWoA/sAZuSLoEBcA0cAc+58SXMrFHyRcbWt79sTlVSA6ByfZaCHuCcc2dlk3POAdeRdJAU+CzxJ4CnKB/EAu5HFWwBkw6HZeAF6ADTZQW+zbU9cAZ0SuI2f8qvHv8v+AKiM2qrYVNTaQAAAABJRU5ErkJggg==)
-![AI](https://img.shields.io/badge/AI-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![NLP](https://img.shields.io/badge/NLP-8E44AD?style=for-the-badge&logo=natural-language-processing&logoColor=white)
-![LLMs](https://img.shields.io/badge/LLMs-009688?style=for-the-badge&logo=openai&logoColor=white)
+![image](https://github.com/user-attachments/assets/2f64f9cc-c7cc-4b1c-a7dc-813a562d0ea8)![image](https://github.com/user-attachments/assets/f5a374e1-8dc7-47ea-934f-8f6e18fbf32b)![image](https://github.com/user-attachments/assets/b19a630c-3708-49b7-a944-1c7c68fb6c36)![image](https://github.com/user-attachments/assets/f40672dd-7ae2-4983-9c82-fe87fcb0d51a)![image](https://github.com/user-attachments/assets/8f49066f-5707-49fd-a9a5-3952fd53e67c)
 
 </div>
+
+
+
+
+
 
 ## 🚀 Professional Experience
 
