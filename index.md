@@ -1,7 +1,12 @@
 # Nilesh Chopda's Portfolio
 
-<div align="right">
+<div align="center">
 
+![Data Science](https://img.shields.io/badge/Data%20Science-20232A?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABP0lEQVRIie2UMUsDQRCFv9k7tRFCLKzsLWwESSGIlYVoZWMhiGAriP4TCwubNIKVf8DKRkQQRNAyEBERFAXlTNYi5zFnCPEuGlJ4zezM2zdvd2Zh57+jkvSEEAI+gXp6nZKUuZlvgBawkPZuAQ1J90DOzABCCMvAFbCUZFqS6qOGW8AFcAwsShoDd8AH0AXmgUPgXNJGpslaOjzNbC867ZrZSXR/MLNWdF+b2VTZ5BDYjvL9GNwFxiW9AKyUFVgFviTVACS9Ao/ACrBWVqANnEm6lXTvnOsCb8A6cFBWoA/sAZuSLoEBcA0cAc+58SXMrFHyRcbWt79sTlVSA6ByfZaCHuCcc2dlk3POAdeRdJAU+CzxJ4CnKB/EAu5HFWwBkw6HZeAF6ADTZQW+zbU9cAZ0SuI2f8qvHv8v+AKiM2qrYVNTaQAAAABJRU5ErkJggg==)
+![AI](https://img.shields.io/badge/AI-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![NLP](https://img.shields.io/badge/NLP-8E44AD?style=for-the-badge&logo=natural-language-processing&logoColor=white)
+![LLMs](https://img.shields.io/badge/LLMs-009688?style=for-the-badge&logo=openai&logoColor=white)
 
 </div>
 
@@ -70,7 +75,44 @@ Implemented OpenAI's function calling feature to extract structured data from un
 
 </details>
 
-[Previous projects retained...]
+#### 📊 Digitisation of Piping Extraction and Remedial Action Report Forms
+
+Led a team in the digitisation of PL-751 forms in the Oil and Natural Gas sector, improving data accuracy, reducing manual effort by 80%, and enhancing document management efficiency through document segmentation, layout analysis, and OCR text extraction.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- Python
+- Regular Expressions
+- OCR
+
+</details>
+
+#### 🏥 Automated Medical Coding System
+
+Developed a real-time automated medical coding system for an eye hospital chain using Retrieval-Augmented Generation (RAG) and Hugging Face Transformers for precise code tagging. Deployed models with Azure ML and incorporated MLOps with MLflow for rigorous experiment evaluation.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- Hugging Face Transformers
+- RAG
+- Azure ML
+- MLflow
+
+</details>
+
+#### 💬 Enterprise Question-Answer System
+
+Conceptualised and operationalised an enterprise Question-Answer system within Azure, utilising OpenAI GPT-3.5 and Cognitive Search services to extract nuanced insights from diverse document formats like invoices, contracts, and statements with optimised content segmentation for production deployment.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- OpenAI GPT-3.5
+- Azure Cognitive Search
+
+</details>
 
 ---
 
@@ -91,7 +133,42 @@ Developed a comprehensive knowledge base system using LlamaIndex, incorporating 
 
 </details>
 
-[Previous projects retained...]
+#### 📉 Customer Contract Churn Prediction
+
+Led a team to design a deep learning model to predict customer contract churn rate for a Swiss elevator manufacturer, improving churn identification precision by 40%.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- Deep Learning
+- Python
+
+</details>
+
+#### 🧠 Natural Language Processing Solution for Raw Material Optimization
+
+Developed an NLP solution for a Saudi petrochemical firm to optimize raw material accumulation, resulting in savings of over $300K.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- Natural Language Processing
+- Python
+
+</details>
+
+#### 🚗 Driving Behaviour Pattern Recognition
+
+Created an AI solution to automate driving behaviour pattern recognition from wrist-mounted inertia sensors, improving response time by 35%.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- AI
+- Sensor Data Analysis
+- Python
+
+</details>
 
 ---
 
@@ -112,30 +189,90 @@ Created an end-to-end content generation pipeline using LangChain, incorporating
 
 </details>
 
-[Previous projects retained...]
+#### 🖥️ Web Server Issue Prediction
+
+Used machine learning to prefigure web server issues from collected metadata, achieving 98% uptime and a 20% reduction in downtime incidents.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- Machine Learning
+- Python
+
+</details>
+
+#### 🌐 Personalized Website Recommendations
+
+Employed machine learning algorithms for personalized website recommendations, resulting in a 30% increase in website engagement.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- Machine Learning
+- Python
+
+</details>
+
+#### 👥 Customer Segmentation
+
+Utilized ML for customer segmentation, leading to a 25% increase in satisfaction and a 15% increase in sales.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- Machine Learning
+- Python
+
+</details>
 
 ---
 
 ### Data Analyst | Cognizant Technology Solutions
 <small>*11/2012 – 01/2014*</small>
 
-[Previous projects retained...]
+#### 📊 Data Visualization and BI Reports
+
+Produced visualizations and BI reports in Tableau and Power BI to help stakeholders interpret complex data relationships and trends, improving data comprehension by 35%.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- Tableau
+- Power BI
+- SQL
+- Python
+
+</details>
+
+#### 🕵️ Fraud Detection
+
+Analyzed data using SQL and Python to detect fraudulent claims and transactions, reducing insurance claim payouts by 25% and fraudulent losses by 30%.
+
+<details>
+<summary><strong>Technologies Used</strong></summary>
+
+- SQL
+- Python
+
+</details>
 
 ---
 
 ## 🛠️ Skills & Technologies
 
-- **Programming Languages:** Python, SQL, R
-- **Machine Learning:** Scikit-learn, TensorFlow, PyTorch, XGBoost
-- **Deep Learning:** Transformers, BERT, GPT
-- **NLP:** Spacy, NLTK, Gensim
-- **LLM Frameworks:** LangChain, LlamaIndex, Unsloth, Lamini
-- **Cloud Platforms:** AWS (SageMaker, Bedrock), Azure (Machine Learning, OpenAI), Google Cloud
-- **Big Data:** Spark, Hadoop
-- **Databases:** PostgreSQL, MongoDB, Cassandra
-- **Visualization:** Tableau, Power BI, Matplotlib, Seaborn
-- **Version Control:** Git, GitHub
-- **MLOps:** MLflow, Kubeflow, Docker
+| Category | Skills |
+|----------|--------|
+| Programming Languages | Python, SQL, R |
+| Machine Learning | Scikit-learn, TensorFlow, PyTorch, XGBoost |
+| Deep Learning | Transformers, BERT, GPT |
+| NLP | Spacy, NLTK, Gensim |
+| LLM Frameworks | LangChain, LlamaIndex, Unsloth, Lamini |
+| Cloud Platforms | AWS (SageMaker, Bedrock), Azure (Machine Learning, OpenAI), Google Cloud |
+| Big Data | Spark, Hadoop |
+| Databases | PostgreSQL, MongoDB, Cassandra |
+| Visualization | Tableau, Power BI, Matplotlib, Seaborn |
+| Version Control | Git, GitHub |
+| MLOps | MLflow, Kubeflow, Docker |
 
 ## 🔬 Open Source Contributions
 
@@ -145,11 +282,11 @@ Created an end-to-end content generation pipeline using LangChain, incorporating
 
 ## 📚 Publications
 
-- **Optimizing RAG Systems: A Comprehensive Guide to Advanced Techniques**
-  <small>Published on Medium in February 2024</small>
-  
-- **Understanding TensorFlow Object Detection API for Traffic Lights Detection**
+- **[Understanding TensorFlow Object Detection API for Traffic Lights Detection](https://medium.com/@your-medium-handle/article-link)**
   <small>Published on Medium in April 2019</small>
+
+- **[Optimizing RAG Systems: A Comprehensive Guide to Advanced Techniques](https://medium.com/@your-medium-handle/article-link)**
+  <small>Published on Medium in February 2024</small>
 
 ---
 
