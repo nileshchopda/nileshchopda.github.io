@@ -1,15 +1,4 @@
 
-<div align="center">
-
-![image](https://github.com/user-attachments/assets/2f64f9cc-c7cc-4b1c-a7dc-813a562d0ea8)![image](https://github.com/user-attachments/assets/f5a374e1-8dc7-47ea-934f-8f6e18fbf32b)![image](https://github.com/user-attachments/assets/b19a630c-3708-49b7-a944-1c7c68fb6c36)![image](https://github.com/user-attachments/assets/f40672dd-7ae2-4983-9c82-fe87fcb0d51a)![image](https://github.com/user-attachments/assets/8f49066f-5707-49fd-a9a5-3952fd53e67c)
-
-</div>
-
-
-
-
-
-
 ## 🚀 Professional Experience
 
 ### Data Science Architect | Calsoft Inc
