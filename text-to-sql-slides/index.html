@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to SQL with Large Language Models</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            overflow: hidden;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide {
+            display: none;
+            padding: 60px;
+            text-align: center;
+            max-width: 900px;
+            width: 90%;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        h2 {
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #a8e6cf;
+        }
+        
+        p, li {
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        ul {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        
+        .code-block {
+            background: rgba(0,0,0,0.4);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            text-align: left;
+            border-left: 4px solid #4ecdc4;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .example-box {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+        
+        .nav-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .nav-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .slide-counter {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(0,0,0,0.3);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .highlight {
+            color: #ffd93d;
+            font-weight: bold;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .pros, .cons {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .pros h4 {
+            color: #4ecdc4;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .cons h4 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .architecture-diagram {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .flow-step {
+            display: inline-block;
+            background: rgba(76, 201, 196, 0.3);
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #4ecdc4;
+        }
+        
+        .arrow {
+            font-size: 2em;
+            color: #ffd93d;
+            margin: 0 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .slide { padding: 30px 20px; }
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 2em; }
+            p, li { font-size: 1.1em; }
+            .pros-cons { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide-counter">
+            <span id="slideNumber">1</span> / <span id="totalSlides">10</span>
+        </div>
+        
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <h1>Text to SQL with Large Language Models</h1>
+            <p style="font-size: 1.6em; margin: 40px 0;">Transforming Natural Language into Database Queries</p>
+            <p style="font-size: 1.2em; opacity: 0.8;">A comprehensive guide from basics to advanced techniques</p>
+            <div style="margin-top: 60px; font-size: 1.1em; opacity: 0.7;">
+                Press → to navigate through slides
+            </div>
+        </div>
+        
+        <!-- Slide 2: What is Text-to-SQL -->
+        <div class="slide">
+            <h2>What is Text-to-SQL?</h2>
+            <p>Text-to-SQL is the process of converting natural language questions into structured SQL queries that can be executed against databases.</p>
+            
+            <div class="example-box">
+                <h3>Example</h3>
+                <p><strong>Natural Language:</strong> "Show me all customers from New York who made purchases over $1000"</p>
+                <div class="code-block">
+                    SELECT c.name, c.city, SUM(o.amount) as total<br>
+                    FROM customers c<br>
+                    JOIN orders o ON c.id = o.customer_id<br>
+                    WHERE c.city = 'New York' AND o.amount > 1000<br>
+                    GROUP BY c.id, c.name, c.city;
+                </div>
+            </div>
+            
+            <p>This technology democratizes database access, allowing non-technical users to query data using everyday language.</p>
+        </div>
+        
+        <!-- Slide 3: Why Text-to-SQL Matters -->
+        <div class="slide">
+            <h2>Why Text-to-SQL Matters</h2>
+            <ul>
+                <li><span class="highlight">Democratizes Data Access:</span> Enables non-technical users to query databases</li>
+                <li><span class="highlight">Increases Productivity:</span> Faster query generation for analysts and developers</li>
+                <li><span class="highlight">Reduces Errors:</span> Minimizes SQL syntax mistakes</li>
+                <li><span class="highlight">Natural Interface:</span> More intuitive than learning SQL syntax</li>
+                <li><span class="highlight">Business Intelligence:</span> Enables self-service analytics</li>
+                <li><span class="highlight">Cost Reduction:</span> Reduces dependency on database specialists</li>
+            </ul>
+            
+            <div class="example-box" style="margin-top: 40px;">
+                <p><em>"Instead of waiting for a data analyst, a sales manager can directly ask: 'What were our top 5 products last quarter?'"</em></p>
+            </div>
+        </div>
+        
+        <!-- Slide 4: Traditional Approaches vs LLMs -->
+        <div class="slide">
+            <h2>Traditional Approaches vs LLMs</h2>
+            
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>Traditional Methods</h4>
+                    <ul style="font-size: 1.1em;">
+                        <li>Rule-based parsing</li>
+                        <li>Template matching</li>
+                        <li>Semantic parsing</li>
+                        <li>Limited vocabulary</li>
+                        <li>Hand-crafted features</li>
+                        <li>Domain-specific</li>
+                    </ul>
+                </div>
+                
+                <div class="cons">
+                    <h4>LLM-based Approaches</h4>
+                    <ul style="font-size: 1.1em;">
+                        <li>Neural language understanding</li>
+                        <li>Context awareness</li>
+                        <li>Generalization capability</li>
+                        <li>Rich vocabulary handling</li>
+                        <li>End-to-end learning</li>
+                        <li>Cross-domain adaptability</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px;">LLMs have revolutionized text-to-SQL by providing better generalization and handling of complex, ambiguous queries.</p>
+        </div>
+        
+        <!-- Slide 5: How LLMs Work for Text-to-SQL -->
+        <div class="slide">
+            <h2>How LLMs Work for Text-to-SQL</h2>
+            
+            <div class="architecture-diagram">
+                <div style="text-align: center;">
+                    <div class="flow-step">Natural Language Input</div>
+                    <span class="arrow">→</span>
+                    <div class="flow-step">Schema Understanding</div>
+                    <span class="arrow">→</span>
+                    <div class="flow-step">LLM Processing</div>
+                    <span class="arrow">→</span>
+                    <div class="flow-step">SQL Generation</div>
+                </div>
+            </div>
+            
+            <ul style="margin-top: 30px;">
+                <li><span class="highlight">Input Processing:</span> Tokenize and encode natural language</li>
+                <li><span class="highlight">Schema Integration:</span> Include database schema context</li>
+                <li><span class="highlight">Attention Mechanism:</span> Focus on relevant table/column relationships</li>
+                <li><span class="highlight">SQL Synthesis:</span> Generate syntactically correct SQL</li>
+                <li><span class="highlight">Post-processing:</span> Validate and refine the output</li>
+            </ul>
+        </div>
+        
+        <!-- Slide 6: Popular LLM Models for Text-to-SQL -->
+        <div class="slide">
+            <h2>Popular LLM Models for Text-to-SQL</h2>
+            
+            <div class="example-box">
+                <h3>General Purpose LLMs</h3>
+                <ul>
+                    <li><span class="highlight">GPT-4/GPT-3.5:</span> Strong performance with proper prompting</li>
+                    <li><span class="highlight">Claude:</span> Excellent reasoning and context handling</li>
+                    <li><span class="highlight">PaLM 2:</span> Google's powerful language model</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <h3>Specialized Text-to-SQL Models</h3>
+                <ul>
+                    <li><span class="highlight">T5-based models:</span> Fine-tuned for SQL generation</li>
+                    <li><span class="highlight">CodeT5:</span> Code-aware transformer architecture</li>
+                    <li><span class="highlight">PICARD:</span> Constrained decoding for valid SQL</li>
+                    <li><span class="highlight">UnifiedSKG:</span> Unified structured knowledge grounding</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Slide 7: Implementation Approaches -->
+        <div class="slide">
+            <h2>Implementation Approaches</h2>
+            
+            <h3>1. Prompt Engineering</h3>
+            <div class="code-block">
+                Given the database schema and natural language question,
+                generate a SQL query.
+                
+                Schema: customers(id, name, city), orders(id, customer_id, amount)
+                Question: "Find customers from NYC with orders over $500"
+                SQL:
+            </div>
+            
+            <h3>2. Few-Shot Learning</h3>
+            <ul>
+                <li>Provide examples of question-SQL pairs in the prompt</li>
+                <li>Help the model understand patterns and conventions</li>
+                <li>Typically 3-5 examples work well</li>
+            </ul>
+            
+            <h3>3. Fine-tuning</h3>
+            <ul>
+                <li>Train models on domain-specific datasets</li>
+                <li>Better performance on specific database schemas</li>
+                <li>Requires substantial training data</li>
+            </ul>
+        </div>
+        
+        <!-- Slide 8: Challenges and Solutions -->
+        <div class="slide">
+            <h2>Challenges and Solutions</h2>
+            
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>Key Challenges</h4>
+                    <ul style="font-size: 1.1em;">
+                        <li>Schema complexity</li>
+                        <li>Ambiguous queries</li>
+                        <li>SQL syntax errors</li>
+                        <li>Performance optimization</li>
+                        <li>Domain-specific terminology</li>
+                        <li>Multi-table joins</li>
+                    </ul>
+                </div>
+                
+                <div class="cons">
+                    <h4>Solutions</h4>
+                    <ul style="font-size: 1.1em;">
+                        <li>Schema-aware prompting</li>
+                        <li>Clarification mechanisms</li>
+                        <li>Syntax validation</li>
+                        <li>Query optimization hints</li>
+                        <li>Domain-specific fine-tuning</li>
+                        <li>Relationship mapping</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="example-box" style="margin-top: 30px;">
+                <p><strong>Pro Tip:</strong> Always include schema information and example queries in your prompts for better results!</p>
+            </div>
+        </div>
+        
+        <!-- Slide 9: Advanced Techniques -->
+        <div class="slide">
+            <h2>Advanced Techniques</h2>
+            
+            <h3>🔄 Chain-of-Thought Reasoning</h3>
+            <p>Break down complex queries into step-by-step reasoning</p>
+            
+            <h3>🛠️ Tool-Augmented Generation</h3>
+            <p>Combine LLMs with external tools for schema validation and query execution</p>
+            
+            <h3>📊 Multi-Modal Approaches</h3>
+            <p>Incorporate visual schema representations and query result previews</p>
+            
+            <h3>🔧 Self-Correction Mechanisms</h3>
+            <p>Enable models to validate and fix their own generated SQL</p>
+            
+            <h3>🎯 Retrieval-Augmented Generation (RAG)</h3>
+            <p>Use relevant examples from databases of query patterns</p>
+            
+            <div class="example-box" style="margin-top: 30px;">
+                <p><em>These techniques can improve accuracy from ~70% to ~90%+ on complex datasets</em></p>
+            </div>
+        </div>
+        
+        <!-- Slide 10: Future and Best Practices -->
+        <div class="slide">
+            <h2>Future & Best Practices</h2>
+            
+            <div class="example-box">
+                <h3>🚀 Future Trends</h3>
+                <ul>
+                    <li>Multimodal text-to-SQL (images, voice)</li>
+                    <li>Real-time query optimization</li>
+                    <li>Conversational database interfaces</li>
+                    <li>Automated schema understanding</li>
+                    <li>Integration with business intelligence tools</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <h3>💡 Best Practices</h3>
+                <ul>
+                    <li><span class="highlight">Schema Documentation:</span> Maintain clear, detailed schema descriptions</li>
+                    <li><span class="highlight">Validation Layers:</span> Always validate generated SQL before execution</li>
+                    <li><span class="highlight">User Feedback:</span> Implement feedback loops for continuous improvement</li>
+                    <li><span class="highlight">Security:</span> Implement proper access controls and query sanitization</li>
+                    <li><span class="highlight">Performance:</span> Monitor and optimize query execution times</li>
+                </ul>
+            </div>
+            
+            <h3 style="margin-top: 40px; color: #ffd93d;">Thank You!</h3>
+            <p>Ready to transform how users interact with your databases? 🚀</p>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="navigation">
+            <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+            <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('totalSlides').textContent = totalSlides;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            document.getElementById('slideNumber').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+        
+        function changeSlide(direction) {
+            if (direction === 1 && currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            } else if (direction === -1 && currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === ' ') {
+                changeSlide(1);
+            } else if (event.key === 'ArrowLeft') {
+                changeSlide(-1);
+            }
+        });
+        
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>
